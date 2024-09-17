@@ -10,8 +10,6 @@ class ApiService {
     if (response.statusCode == 200) {
       var data = productFromJson(response.body);
       return data;
-      // List<dynamic> data = json.decode(response.body);
-      // return data.map((json) => Product.fromJson(json)).toList();
     } else {
       throw Exception('Failed to load products');
     }

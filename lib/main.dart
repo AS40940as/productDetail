@@ -179,10 +179,19 @@ class ProductDetailScreen extends StatelessWidget {
               fit: BoxFit.fill,
             ),
             SizedBox(height: 16.0),
+            Text('Categori: '),
             Text(
               product.category,
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
+            SizedBox(height: 16.0),
+            Text('Content: '),
+            SizedBox(height: 8.0),
+            Expanded(
+                child: Text(
+              product.content,
+              style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+            )),
           ],
         ),
       ),
