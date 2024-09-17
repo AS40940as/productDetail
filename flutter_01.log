@@ -1,0 +1,86 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run --machine --start-paused -d chrome --devtools-server-address http://127.0.0.1:9100/ --target F:\flutter_pro\new_project\lib\main.dart
+
+## exception
+
+_TypeError: type 'bool' is not a subtype of type '_FutureListener<dynamic, dynamic>?'
+
+```
+#0      Future._removeListeners (dart:async/future_impl.dart:515:22)
+#1      Future._completeWithValue (dart:async/future_impl.dart:650:34)
+#2      Future.timeout.<anonymous closure> (dart:async/future_impl.dart:952:17)
+#3      _rootRunUnary (dart:async/zone.dart:1407:47)
+#4      Future._propagateToListeners.handleValueCallback (dart:async/future_impl.dart:847:45)
+#5      Future._propagateToListeners (dart:async/future_impl.dart:876:13)
+#6      Future._completeWithValue (dart:async/future_impl.dart:652:5)
+#7      Future._asyncCompleteWithValue.<anonymous closure> (dart:async/future_impl.dart:722:7)
+#8      _rootRun (dart:async/zone.dart:1399:13)
+#9      _CustomZone.run (dart:async/zone.dart:1301:19)
+#10     _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#11     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#12     _microtaskLoop (dart:async/schedule_microtask.dart:40:21)
+#13     _startMicrotaskLoop (dart:async/schedule_microtask.dart:49:5)
+#14     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:118:13)
+#15     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:185:5)
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel stable, 3.22.2, on Microsoft Windows [Version 10.0.19045.4780], locale fa-IR)
+    • Flutter version 3.22.2 on channel stable at C:\Users\omid\AppData\Local\Android\Sdk\flutter
+    • Upstream repository https://github.com/flutter/flutter.git
+    • Framework revision 761747bfc5 (3 months ago), 2024-06-05 22:15:13 +0200
+    • Engine revision edd8546116
+    • Dart version 3.4.3
+    • DevTools version 2.34.3
+    • Pub download mirror https://pub.flutter-io.cn
+    • Flutter download mirror https://storage.flutter-io.cn
+
+[☠] Windows Version (the doctor check crashed)
+    ✗ Due to an error, the doctor check did not complete. If the error message below is not helpful, please let us know about this issue at https://github.com/flutter/flutter/issues.
+    ✗ Exception: Windows Version exceeded maximum allowed duration of 0:04:30.000000
+    • 
+
+[☠] Android toolchain - develop for Android devices (the doctor check crashed)
+    ✗ Due to an error, the doctor check did not complete. If the error message below is not helpful, please let us know about this issue at https://github.com/flutter/flutter/issues.
+    ✗ Exception: Android toolchain - develop for Android devices exceeded maximum allowed duration of 0:04:30.000000
+    • 
+
+[✓] Chrome - develop for the web
+    • Chrome at C:\Users\omid\AppData\Local\Google\Chrome\Application\chrome.exe
+
+[✗] Visual Studio - develop Windows apps
+    ✗ Visual Studio not installed; this is necessary to develop Windows apps.
+      Download at https://visualstudio.microsoft.com/downloads/.
+      Please install the "Desktop development with C++" workload, including all of its default components
+
+[✓] Android Studio (version 2024.1)
+    • Android Studio at C:\Program Files\Android\Android Studio
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    • Java version OpenJDK Runtime Environment (build 17.0.11+0--11852314)
+
+[✓] VS Code (version 1.92.1)
+    • VS Code at C:\Users\omid\AppData\Local\Programs\Microsoft VS Code
+    • Flutter extension version 3.94.0
+
+[✓] Connected device (3 available)
+    • Windows (desktop) • windows • windows-x64    • Microsoft Windows [Version 10.0.19045.4780]
+    • Chrome (web)      • chrome  • web-javascript • Google Chrome 128.0.6613.113
+    • Edge (web)        • edge    • web-javascript • Microsoft Edge 128.0.2739.42
+
+[!] Network resources
+    ✗ A network error occurred while checking "https://pub.flutter-io.cn": Failed host lookup: 'pub.flutter-io.cn'
+    ✗ An HTTP error occurred while checking "https://storage.flutter-io.cn": Connection closed before full header was received
+    ✗ An HTTP error occurred while checking "https://cocoapods.org/": Connection closed before full header was received
+    ✗ An HTTP error occurred while checking "https://github.com/": Connection closed before full header was received
+
+! Doctor found issues in 4 categories.
+```
